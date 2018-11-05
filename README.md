@@ -1,7 +1,7 @@
 # Hygga Programming Test
 ## Requirements
-1. Java 8
-2. Maven
+1. Java 8 ([Download](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
+2. Maven ([Download](https://maven.apache.org/download.cgi), [Install](https://maven.apache.org/install.html))
 ## Instructions
 1. Open the terminal, and go to the root of the project. Copy the commands below into the terminal.
 2. ```mvn package```
