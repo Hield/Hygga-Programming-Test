@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Hygga programming test</title>
+    <style>
+        html {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hygga programming test</h1>
+    <h2>Instructions</h2>
+    <h3>Part 1</h3>
+    <ul>
+        <li><p>1. Open the browser console (Ctrl + Shift + J)</p></li>
+        <li><p>2. Type "printInAFrame(str)" in the console with "str" being the string you want to print out</p></li>
+    </ul>
+    <p>Alternately you can test the function by clickling the button below</p>
+    <input id="first-input">
+    <button onclick="frameBtnFunc()" type="button">Print In A Frame</button>
+    <p>Result:</p>
+    <code id="first-result"></code>
+    <h3>Part 2</h3>
+    <h4>First way: Postman</h4>
+    <ul>
+        <li><p>1. Get Postman: <a href="https://chrome.google.com/webstore/detail/fhbjgbiflinjbdggehcddcbncdddomop">Link</a></p></li>
+        <li><p>2. Send a POST request to /hash with the request body in the form of ```{"text": "xyz"}``` (swap "xyz" for your preferred string)</p></li>
+        <li><p>3. Check the result in Postman</p></li>
+    </ul>
+    <h4>Second way: Curl</h4>
+    <ul>
+        <li><p>1. Install curl if you don't have it yet: <a href="https://curl.haxx.se/download.html">Link</a></p></li>
+        <li><p>2. Paste the command below to the terminal (swap "xyz" for your preferred string)</p></li>
+        <p>curl --header "Content-Type: application/json" --request POST --data '{"text":"xyz"}' http://localhost:4567/hash</p>
+        <li><p>3. Check the result in the terminal</p></li>
+    </ul>
+    <p>Alternately you can test the function by clickling the button below (Enter the text you want to hash)</p>
+    <input id="second-input">
+    <button onclick="hashBtnFunc()" type="button">Hash</button>
+    <p>Result:</p>
+    <code id="second-result"></code>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
