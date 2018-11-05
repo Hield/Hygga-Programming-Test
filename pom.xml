@@ -67,25 +67,39 @@
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
           <executions>
-              <execution>
-                  <phase>package</phase>
-                  <goals>
-                      <goal>single</goal>
-                  </goals>
-              </execution>
-          </executions>
-          <configuration>
-              <descriptorRefs>
-                  <!-- This tells Maven to include all dependencies -->
-                  <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
-              <archive>
-                  <manifest>
-                      <mainClass>com.example.App</mainClass>
-                  </manifest>
-              </archive>
-            </configuration>
-        </plugin>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <descriptorRefs>
+                <!-- This tells Maven to include all dependencies -->
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+                <manifest>
+                    <mainClass>com.example.App</mainClass>
+                </manifest>
+            </archive>
+          </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>0.4.4</version>
+        <configuration>
+            <jdkVersion>1.8</jdkVersion>
+            <!-- Use your own application name -->
+            <appName>hygga-test</appName> 
+            <processTypes>
+                <web>java -jar target/hygga-test-1.0-SNAPSHOT-jar-with-dependencies.jar</web>
+            </processTypes>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
