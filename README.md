@@ -11,3 +11,5 @@
 ## Inportant files to check
 1. Part 1: ```src/main/resources/public/script.js```
 2. Part 2: ```src/main/java/com/example/App.java```
+## Deployed version
+An online app is available on Heroku at [Link](https://hygga-test.herokuapp.com/)
